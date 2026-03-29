@@ -112,6 +112,15 @@ export function LeadForm({
 
       if (typeof window !== "undefined") {
         sessionStorage.setItem("lead_form_submitted", "true");
+
+        const w = window as unknown as { dataLayer: Record<string, unknown>[] };
+        w.dataLayer = w.dataLayer || [];
+        w.dataLayer.push({
+          event: "form_submission",
+          form_source: source,
+          form_id: formId,
+          page_path: page,
+        });
       }
 
       router.push("/thank-you");
