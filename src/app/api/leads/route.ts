@@ -13,7 +13,12 @@ type LeadPayload = {
 };
 
 function getSQL() {
-  return neon(process.env.DATABASE_URL!);
+  const url =
+    process.env.DATABASE_URL || process.env.Database_DATABASE_URL;
+  if (!url) {
+    throw new Error("DATABASE_URL is not configured");
+  }
+  return neon(url);
 }
 
 function isValidEmail(email: string) {
@@ -22,7 +27,9 @@ function isValidEmail(email: string) {
 
 export async function GET() {
   try {
-    const hasDbUrl = Boolean(process.env.DATABASE_URL);
+    const hasDbUrl = Boolean(
+      process.env.DATABASE_URL || process.env.Database_DATABASE_URL,
+    );
     const sql = getSQL();
     await sql`SELECT 1`;
     return NextResponse.json({ status: "ok", hasDbUrl });
@@ -30,7 +37,9 @@ export async function GET() {
     return NextResponse.json(
       {
         status: "error",
-        hasDbUrl: Boolean(process.env.DATABASE_URL),
+        hasDbUrl: Boolean(
+          process.env.DATABASE_URL || process.env.Database_DATABASE_URL,
+        ),
         message: error instanceof Error ? error.message : String(error),
       },
       { status: 500 },
