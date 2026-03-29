@@ -20,6 +20,24 @@ function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
+export async function GET() {
+  try {
+    const hasDbUrl = Boolean(process.env.DATABASE_URL);
+    const sql = getSQL();
+    await sql`SELECT 1`;
+    return NextResponse.json({ status: "ok", hasDbUrl });
+  } catch (error) {
+    return NextResponse.json(
+      {
+        status: "error",
+        hasDbUrl: Boolean(process.env.DATABASE_URL),
+        message: error instanceof Error ? error.message : String(error),
+      },
+      { status: 500 },
+    );
+  }
+}
+
 export async function POST(request: Request) {
   try {
     const sql = getSQL();
