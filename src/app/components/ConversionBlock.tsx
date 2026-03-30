@@ -5,7 +5,7 @@ import { LeadForm } from "./LeadForm";
 export default function ConversionBlock() {
   return (
     <section
-      id="partner-form"
+      id="partnerform"
       className="relative overflow-hidden border-t border-gray-100 bg-gradient-to-br from-slate-50 via-white to-slate-100 py-28"
     >
       <div className="pointer-events-none absolute inset-0">
