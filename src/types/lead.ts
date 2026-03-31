@@ -3,6 +3,7 @@ export type LeadSource = "hero" | "conversion_block";
 export type LeadFormValues = {
   fullName: string;
   email: string;
+  phoneNumber: string;
   companyName: string;
   requirements: string;
   source: LeadSource;

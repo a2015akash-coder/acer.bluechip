@@ -6,11 +6,14 @@ type LeadSource = "hero" | "conversion_block";
 type LeadPayload = {
   fullName?: string;
   email?: string;
+  phoneNumber?: string;
   companyName?: string;
   requirements?: string;
   source?: LeadSource;
   page?: string;
 };
+
+const PHONE_REGEX = /^\+?[0-9\s\-()]{7,20}$/;
 
 function getSQL() {
   const url =
@@ -23,6 +26,10 @@ function getSQL() {
 
 function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function isValidPhoneNumber(phoneNumber: string) {
+  return PHONE_REGEX.test(phoneNumber);
 }
 
 export async function GET() {
@@ -54,6 +61,7 @@ export async function POST(request: Request) {
 
     const fullName = body.fullName?.trim() || "";
     const email = body.email?.trim() || "";
+    const phoneNumber = body.phoneNumber?.trim() || "";
     const companyName = body.companyName?.trim() || "";
     const requirements = body.requirements?.trim() || "";
     const source = body.source;
@@ -80,6 +88,20 @@ export async function POST(request: Request) {
       );
     }
 
+    if (!phoneNumber) {
+      return NextResponse.json(
+        { error: "Phone number is required." },
+        { status: 400 },
+      );
+    }
+
+    if (!isValidPhoneNumber(phoneNumber)) {
+      return NextResponse.json(
+        { error: "Invalid phone number." },
+        { status: 400 },
+      );
+    }
+
     if (source !== "hero" && source !== "conversion_block") {
       return NextResponse.json(
         { error: "Invalid source." },
@@ -91,6 +113,7 @@ export async function POST(request: Request) {
       INSERT INTO leads (
         full_name,
         email,
+        phone_number,
         company_name,
         requirements,
         source,
@@ -98,6 +121,7 @@ export async function POST(request: Request) {
       ) VALUES (
         ${fullName},
         ${email},
+        ${phoneNumber},
         ${companyName || null},
         ${requirements || null},
         ${source},

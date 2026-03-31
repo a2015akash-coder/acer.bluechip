@@ -19,6 +19,8 @@ type FormErrors = Partial<
   Record<keyof Omit<LeadFormValues, "source" | "page">, string>
 >;
 
+const PHONE_REGEX = /^\+?[0-9\s\-()]{7,20}$/;
+
 export function LeadForm({
   source,
   formId,
@@ -32,6 +34,7 @@ export function LeadForm({
   const [values, setValues] = useState({
     fullName: "",
     email: "",
+    phoneNumber: "",
     companyName: "",
     requirements: "",
   });
@@ -57,6 +60,12 @@ export function LeadForm({
       nextErrors.email = "Business email is required.";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email.trim())) {
       nextErrors.email = "Enter a valid email address.";
+    }
+
+    if (!values.phoneNumber.trim()) {
+      nextErrors.phoneNumber = "Phone number is required.";
+    } else if (!PHONE_REGEX.test(values.phoneNumber.trim())) {
+      nextErrors.phoneNumber = "Enter a valid phone number.";
     }
 
     setErrors(nextErrors);
@@ -105,6 +114,7 @@ export function LeadForm({
       setValues({
         fullName: "",
         email: "",
+        phoneNumber: "",
         companyName: "",
         requirements: "",
       });
@@ -194,6 +204,30 @@ export function LeadForm({
               className="mt-1 text-xs text-red-600"
             >
               {errors.email}
+            </p>
+          )}
+        </div>
+
+        <div>
+          <input
+            type="tel"
+            placeholder="Phone Number"
+            autoComplete="tel"
+            inputMode="tel"
+            value={values.phoneNumber}
+            onChange={handleChange("phoneNumber")}
+            aria-invalid={Boolean(errors.phoneNumber)}
+            aria-describedby={
+              errors.phoneNumber ? `${formId}-phoneNumber-error` : undefined
+            }
+            className="w-full rounded-md border border-gray-300 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-acer"
+          />
+          {errors.phoneNumber && (
+            <p
+              id={`${formId}-phoneNumber-error`}
+              className="mt-1 text-xs text-red-600"
+            >
+              {errors.phoneNumber}
             </p>
           )}
         </div>
