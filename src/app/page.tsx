@@ -16,7 +16,7 @@ export default function Home() {
       <StickyHeader />
       <main>
         <Hero />
-        <ValueProps />
+       
         <WhyAcer />
         <HowDaasWorks />
         <Portfolio />
@@ -24,9 +24,10 @@ export default function Home() {
         <Testimonials />
 
         <FAQSection />
+         <ValueProps />
         <ConversionBlock />
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

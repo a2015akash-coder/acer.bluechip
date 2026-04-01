@@ -6,7 +6,7 @@ export default function ConversionBlock() {
   return (
     <section
       id="partnerform"
-      className="relative overflow-hidden border-t border-gray-100 bg-gradient-to-br from-slate-50 via-white to-slate-100 py-28"
+      className="relative overflow-hidden border-t border-gray-100 bg-gradient-to-br from-slate-50 via-white to-slate-100 py-16"
     >
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -top-24 left-0 h-[26rem] w-[26rem] rounded-full bg-green-200/30 blur-3xl" />

@@ -1,7 +1,5 @@
 "use client";
 
-import { ChevronRight } from "lucide-react";
-import { useCallback } from "react";
 import { LeadForm } from "./LeadForm";
 
 const VALUE_POINTS = [
@@ -25,14 +23,8 @@ const HERO_IMAGE = {
 };
 
 export default function Hero() {
-  const handleScrollToForm = useCallback(() => {
-    document
-      .getElementById("daas-form")
-      ?.scrollIntoView({ behavior: "smooth", block: "start" });
-  }, []);
-
   return (
-    <section className="relative flex min-h-[90vh] items-center overflow-hidden pt-18 pb-16">
+    <section className="relative flex min-h-[92vh] items-center overflow-hidden pt-20 pb-12">
       <img
         src={HERO_IMAGE.src}
         srcSet={HERO_IMAGE.srcSet}
@@ -48,46 +40,49 @@ export default function Hero() {
       />
 
       <div
-        className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/75 to-white/40 lg:to-transparent"
+        className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/50 lg:to-white/20"
         aria-hidden="true"
       />
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-2 lg:gap-16">
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          {/* Left Content */}
           <div className="space-y-6">
-            <h1 className="max-w-[650px] text-4xl font-bold leading-[1.1] tracking-[-0.02em] text-slate-900 md:text-5xl lg:text-[48px]">
+            {/* Trust badge */}
+            <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-4 py-1.5 shadow-sm backdrop-blur-sm">
+              <span className="h-2 w-2 rounded-full bg-acer" />
+              <span className="text-xs font-medium tracking-wide text-slate-600">
+                Authorised Acer Distributor &middot; Trusted Partner in Channel
+                Excellence
+              </span>
+            </div>
+
+            <h1 className="max-w-[600px] text-4xl font-bold leading-[1.08] tracking-[-0.02em] text-slate-900 md:text-5xl lg:text-[52px]">
               Flexible <span className="text-acer">Acer</span>{" "}
-              Device-as-a-Service Solutions
+              Device&#8209;as&#8209;a&#8209;Service Solutions
             </h1>
 
-            <p className="max-w-lg text-lg leading-relaxed text-slate-600">
+            <p className="max-w-lg text-base leading-relaxed text-slate-600 md:text-lg">
               A fully managed, subscription-based model enabling partners to
               deliver structured device programs without upfront capital
               investment for their clients.
             </p>
 
-            <ul className="space-y-3 text-sm text-slate-700">
+            <div className="flex flex-wrap gap-2.5 pt-1">
               {VALUE_POINTS.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-acer" />
-                  <span className="leading-relaxed">{item}</span>
-                </li>
+                <span
+                  key={item}
+                  className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white/70 px-3.5 py-1.5 text-[13px] font-medium text-slate-700 shadow-sm backdrop-blur-sm"
+                >
+                  <span className="h-1.5 w-1.5 rounded-full bg-acer" />
+                  {item}
+                </span>
               ))}
-            </ul>
-
-            <div className="pt-4">
-              <button
-                type="button"
-                onClick={handleScrollToForm}
-                className="inline-flex items-center gap-2 rounded-sm font-semibold text-acer hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-acer focus-visible:ring-offset-2"
-              >
-                Inquire About DaaS
-                <ChevronRight className="h-4 w-4" aria-hidden="true" />
-              </button>
             </div>
           </div>
 
-          <div className="w-full">
+          {/* Right Form */}
+          <div className="w-full lg:pl-4">
             <LeadForm source="hero" formId="daas-form" />
           </div>
         </div>

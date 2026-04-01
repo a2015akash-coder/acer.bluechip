@@ -3,6 +3,14 @@ import { NextResponse } from "next/server";
 
 type LeadSource = "hero" | "conversion_block";
 
+type UtmParams = {
+  utm_source?: string;
+  utm_medium?: string;
+  utm_campaign?: string;
+  utm_content?: string;
+  utm_term?: string;
+};
+
 type LeadPayload = {
   fullName?: string;
   email?: string;
@@ -11,6 +19,7 @@ type LeadPayload = {
   requirements?: string;
   source?: LeadSource;
   page?: string;
+  utm?: UtmParams;
 };
 
 const PHONE_REGEX = /^\+?[0-9\s\-()]{7,20}$/;
@@ -66,6 +75,11 @@ export async function POST(request: Request) {
     const requirements = body.requirements?.trim() || "";
     const source = body.source;
     const page = body.page?.trim() || "/";
+    const utmSource = body.utm?.utm_source?.trim() || "";
+    const utmMedium = body.utm?.utm_medium?.trim() || "";
+    const utmCampaign = body.utm?.utm_campaign?.trim() || "";
+    const utmContent = body.utm?.utm_content?.trim() || "";
+    const utmTerm = body.utm?.utm_term?.trim() || "";
 
     if (!fullName) {
       return NextResponse.json(
@@ -117,7 +131,12 @@ export async function POST(request: Request) {
         company_name,
         requirements,
         source,
-        page
+        page,
+        utm_source,
+        utm_medium,
+        utm_campaign,
+        utm_content,
+        utm_term
       ) VALUES (
         ${fullName},
         ${email},
@@ -125,7 +144,12 @@ export async function POST(request: Request) {
         ${companyName || null},
         ${requirements || null},
         ${source},
-        ${page}
+        ${page},
+        ${utmSource || null},
+        ${utmMedium || null},
+        ${utmCampaign || null},
+        ${utmContent || null},
+        ${utmTerm || null}
       )
     `;
 

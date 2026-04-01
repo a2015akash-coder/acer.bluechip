@@ -1,7 +1,6 @@
 "use client";
 
 import { ChevronRight } from "lucide-react";
-import { useCallback } from "react";
 
 type CaseItem = {
   title: string;
@@ -66,15 +65,9 @@ function FeatureCard({ item, index }: { item: CaseItem; index: number }) {
 }
 
 export default function Portfolio() {
-  const handleScrollToForm = useCallback(() => {
-    document
-      .getElementById("daas-form")
-      ?.scrollIntoView({ behavior: "smooth", block: "start" });
-  }, []);
-
   return (
     <section
-      className="relative overflow-hidden bg-green-50 py-20 md:py-24"
+      className="relative overflow-hidden bg-green-50 py-14 md:py-16"
       aria-labelledby="portfolio-heading"
     >
       <div className="pointer-events-none absolute inset-0" aria-hidden="true">
@@ -105,14 +98,15 @@ export default function Portfolio() {
         </div>
 
         <div className="mt-14 text-center md:mt-16">
-          <button
-            type="button"
-            onClick={handleScrollToForm}
+          <a
+            href="https://www2.bluechipit.com.au/eMarketing/Marketing/acer/2026/Acer%20DaaS.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg bg-acer px-8 py-3 font-semibold text-white shadow transition-all duration-300 hover:bg-acer-dark hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-acer focus-visible:ring-offset-2"
           >
             Get the Full Acer DaaS Overview
             <ChevronRight className="h-4 w-4" aria-hidden="true" />
-          </button>
+          </a>
         </div>
       </div>
     </section>

@@ -21,7 +21,7 @@ const steps = [
 
 export default function WhyAcer() {
   return (
-    <section className="relative overflow-hidden bg-gray-50 py-28">
+    <section className="relative overflow-hidden bg-gray-50 py-16">
       {/* Background */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -top-24 -left-24 h-96 w-96 rounded-full bg-green-100/40 blur-3xl" />
@@ -31,7 +31,7 @@ export default function WhyAcer() {
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mx-auto mb-24 max-w-3xl text-center">
+        <div className="mx-auto mb-14 max-w-3xl text-center">
           <h2 className="mb-4 text-3xl font-bold leading-tight text-slate-900 md:text-4xl">
             Reduce Costs with a Subscription-Based{" "}
             <span className="text-acer">Device Management</span>
@@ -110,13 +110,13 @@ export default function WhyAcer() {
         </div>
 
         {/* CTA */}
-        <div className="mt-24 text-center">
+        <div className="mt-14 text-center">
           <button
             type="button"
             className="inline-flex items-center gap-2 rounded-lg bg-acer px-8 py-3 font-semibold text-white shadow transition-all duration-300 hover:bg-acer-dark hover:shadow-lg"
             onClick={() =>
               document
-                .getElementById("daas-form")
+                .getElementById("partnerform")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
           >

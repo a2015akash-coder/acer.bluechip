@@ -25,7 +25,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="relative overflow-hidden bg-green-50 py-20">
+    <section className="relative overflow-hidden bg-green-50 py-14">
       {/* Geometric Background Elements */}
       <div className="absolute -top-20 -left-20 h-72 w-72 rounded-full bg-emerald-100 opacity-40 blur-3xl" />
       <div className="absolute right-0 bottom-0 h-80 w-80 rounded-full bg-blue-100 opacity-40 blur-3xl" />

@@ -26,7 +26,7 @@ export default function Resources() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden border-t border-gray-200 bg-gray-50 py-28">
+    <section className="relative overflow-hidden border-t border-gray-200 bg-gray-50 py-16">
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
           {/* LEFT SIDE */}

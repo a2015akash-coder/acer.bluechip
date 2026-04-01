@@ -80,7 +80,7 @@ export default function StickyHeader() {
           {/* CTA */}
           <button
             type="button"
-            onClick={() => scrollToSection("partner-form")}
+            onClick={() => scrollToSection("partnerform")}
             className="min-h-[44px] shrink-0 whitespace-nowrap rounded-md bg-acer px-4 text-xs font-semibold text-white shadow-sm transition-colors duration-200 hover:bg-acer-dark focus:outline-none focus:ring-2 focus:ring-acer focus:ring-offset-2 sm:px-5 sm:text-sm"
           >
             <span className="sm:hidden">Inquire</span>

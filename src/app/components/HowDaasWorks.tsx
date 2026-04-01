@@ -37,10 +37,10 @@ const steps = [
 
 export default function HowDaasWorks() {
   return (
-    <section className="bg-gray-50 py-28">
+    <section className="bg-white py-16">
       <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
-        <div className="mx-auto mb-20 max-w-4xl text-center">
+        <div className="mx-auto mb-14 max-w-4xl text-center">
           <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">
             Rest Easy with <span className="text-acer">End-to-End</span> Support
           </h2>
@@ -119,12 +119,17 @@ export default function HowDaasWorks() {
         </div>
 
         {/* CTA */}
-        <div className="mt-20 text-center">
+        <div className="mt-14 text-center">
           <button
             type="button"
+            onClick={() =>
+              document
+                .getElementById("partnerform")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
             className="inline-flex items-center gap-2 rounded-lg bg-acer px-8 py-3 font-semibold text-white shadow transition-all hover:bg-acer-dark"
           >
-            Start Your DaaS Journey
+            Inquire About DaaS
             <ChevronRight className="h-4 w-4" />
           </button>
         </div>
