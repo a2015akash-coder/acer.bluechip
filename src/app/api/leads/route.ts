@@ -9,6 +9,7 @@ type UtmParams = {
   utm_campaign?: string;
   utm_content?: string;
   utm_term?: string;
+  utm_referer?: string;
 };
 
 type LeadPayload = {
@@ -80,6 +81,7 @@ export async function POST(request: Request) {
     const utmCampaign = body.utm?.utm_campaign?.trim() || "";
     const utmContent = body.utm?.utm_content?.trim() || "";
     const utmTerm = body.utm?.utm_term?.trim() || "";
+    const utmReferer = body.utm?.utm_referer?.trim() || "";
 
     if (!fullName) {
       return NextResponse.json(
@@ -136,7 +138,8 @@ export async function POST(request: Request) {
         utm_medium,
         utm_campaign,
         utm_content,
-        utm_term
+        utm_term,
+        utm_referer
       ) VALUES (
         ${fullName},
         ${email},
@@ -149,7 +152,8 @@ export async function POST(request: Request) {
         ${utmMedium || null},
         ${utmCampaign || null},
         ${utmContent || null},
-        ${utmTerm || null}
+        ${utmTerm || null},
+        ${utmReferer || null}
       )
     `;
 

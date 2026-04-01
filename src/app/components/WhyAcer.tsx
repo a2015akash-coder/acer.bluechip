@@ -40,7 +40,7 @@ export default function WhyAcer() {
             As an authorised Acer distributor, Bluechip enables partners to
             deliver Device as a Service through a subscription model that
             reduces upfront costs and shifts device investment to predictable
-            monthly spend, supporting business laptop leasing and scalable
+            monthly spend, supporting business laptops, PCs and Monitors leasing and scalable
             managed device services.
           </p>
         </div>

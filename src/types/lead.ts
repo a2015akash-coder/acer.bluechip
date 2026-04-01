@@ -6,6 +6,7 @@ export type UtmParams = {
   utm_campaign: string;
   utm_content: string;
   utm_term: string;
+  utm_referer: string;
 };
 
 export type LeadFormValues = {

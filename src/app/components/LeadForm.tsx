@@ -33,7 +33,7 @@ export function LeadForm({
 
   const utmParams = useMemo<UtmParams>(() => {
     if (typeof window === "undefined") {
-      return { utm_source: "", utm_medium: "", utm_campaign: "", utm_content: "", utm_term: "" };
+      return { utm_source: "", utm_medium: "", utm_campaign: "", utm_content: "", utm_term: "", utm_referer: "" };
     }
     const params = new URLSearchParams(window.location.search);
     return {
@@ -42,6 +42,7 @@ export function LeadForm({
       utm_campaign: params.get("utm_campaign") || "",
       utm_content: params.get("utm_content") || "",
       utm_term: params.get("utm_term") || "",
+      utm_referer: params.get("utm_referer") || "",
     };
   }, []);
 

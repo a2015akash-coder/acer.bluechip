@@ -16,15 +16,16 @@ export default function Home() {
       <StickyHeader />
       <main>
         <Hero />
-       
+
         <WhyAcer />
         <HowDaasWorks />
         <Portfolio />
-                <Resources />
+        <Resources />
+        <ValueProps />
         <Testimonials />
 
         <FAQSection />
-         <ValueProps />
+
         <ConversionBlock />
       </main>
       {/* <Footer /> */}
