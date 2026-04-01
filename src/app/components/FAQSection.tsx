@@ -10,9 +10,14 @@ const faqs = [
       "Acer Device as a Service is available to authorised partners and MSPs working with Bluechip. Our team will assess your requirements and confirm suitability based on deployment scope and service needs.",
   },
   {
+    question: "How is Acer DaaS priced?",
+    answer:
+      "Pricing is structured as a monthly subscription based on selected hardware, lifecycle services, and contract term, similar to business laptop leasing but with added support and lifecycle services included.",
+  },
+  {
     question: "Can DaaS be offered to existing client environments?",
     answer:
-      "Yes. DaaS can be structured to support both new deployments and device refresh programs within existing environments, subject to hardware and service selection.",
+      "Yes. DaaS can be structured to support both new deployments and device refresh programs within existing environments, supported by device lifecycle management practices.",
   },
   {
     question: "Is there a minimum device volume required?",
@@ -27,7 +32,7 @@ const faqs = [
   {
     question: "How are devices managed during the subscription term?",
     answer:
-      "Devices are supported through selected lifecycle services, including helpdesk support, replacement options, and asset tracking via the management portal.",
+      "Devices are supported through selected lifecycle services, including helpdesk support, replacement options, asset tracking, and managed device services.",
   },
   {
     question: "What happens at the end of the subscription term?",
@@ -61,7 +66,7 @@ export default function FAQSection() {
         {/* Header */}
         <div className="mb-20 text-center">
           <h2 className="mb-4 text-3xl font-bold text-slate-900 md:text-4xl">
-            Frequently Asked Questions
+            Frequently Asked Questions (FAQs)
           </h2>
           <p className="mx-auto max-w-2xl text-base text-slate-600 md:text-lg">
             Answers to common questions regarding Acer Device as a Service

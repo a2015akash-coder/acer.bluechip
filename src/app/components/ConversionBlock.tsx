@@ -17,8 +17,8 @@ export default function ConversionBlock() {
         <div className="grid items-center gap-20 lg:grid-cols-2">
           <div className="max-w-xl">
             <h2 className="mb-6 text-3xl font-bold leading-tight text-slate-900 md:text-4xl">
-              Ready To Add <span className="text-acer">Acer</span> Device as a
-              Service to Your Offering?
+              Ready to Deliver <span className="text-acer">Acer DaaS</span> with
+              Lower Upfront Cost?
             </h2>
 
             <p className="text-lg leading-relaxed text-slate-600">

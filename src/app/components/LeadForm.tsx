@@ -24,7 +24,7 @@ const PHONE_REGEX = /^\+?[0-9\s\-()]{7,20}$/;
 export function LeadForm({
   source,
   formId,
-  title = "Interested in Device as a Service (DaaS)?",
+  title = "Interested in Reducing Upfront Device Costs with Acer DaaS?",
   description = "Work with Bluechip to scope hardware, lifecycle services, and subscription structures aligned to your customer requirements.",
   submitLabel = "Inquire About DaaS",
   className = "",

@@ -2,38 +2,20 @@
 
 import {
   ChevronRight,
-  Headphones,
-  Layers,
-  Leaf,
-  Settings,
-  ShieldCheck,
+  DollarSign,
+  TrendingUp,
 } from "lucide-react";
 
 const steps = [
   {
-    icon: Layers,
-    title: "Complete Lifecycle Support",
-    text: "Support your clients with defined predeployment, in-use, and end-of-term processes within the Acer DaaS program.",
+    icon: DollarSign,
+    title: "No Upfront Capital Investment",
+    text: "Enable your clients to adopt devices without large initial spend, supporting smoother deployment and refresh cycles.",
   },
   {
-    icon: Settings,
-    title: "Seamless & Deployment",
-    text: "Access kitting, asset tagging, configuration, and enrolment services aligned to project requirements.",
-  },
-  {
-    icon: Headphones,
-    title: "Reliable Support & Asset Management",
-    text: "Incorporate Tier 1 support and portal-based asset management within your client delivery model.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Secure & Compliant Disposal",
-    text: "Leverage ISO, R2, NIST 800:88, and DOD-aligned processes within the structured DaaS framework.",
-  },
-  {
-    icon: Leaf,
-    title: "Flexible, Sustainable Hardware",
-    text: "Access Acer commercial devices with substitution options where required, aligned to deployment scope.",
+    icon: TrendingUp,
+    title: "Predictable OPEX Model",
+    text: "Deliver structured monthly subscription terms that align with client budgeting and lifecycle planning.",
   },
 ];
 
@@ -51,13 +33,15 @@ export default function WhyAcer() {
         {/* Header */}
         <div className="mx-auto mb-24 max-w-3xl text-center">
           <h2 className="mb-4 text-3xl font-bold leading-tight text-slate-900 md:text-4xl">
-            Why Work with <span className="text-blue-700">Bluechip</span> for{" "}
-            <span className="text-acer">Acer</span> DaaS
+            Reduce Costs with a Subscription-Based{" "}
+            <span className="text-acer">Device Management</span>
           </h2>
           <p className="text-base leading-relaxed text-slate-600 md:text-lg">
             As an authorised Acer distributor, Bluechip enables partners to
-            structure and coordinate Device as a Service programs through the
-            Acer DaaS framework.
+            deliver Device as a Service through a subscription model that
+            reduces upfront costs and shifts device investment to predictable
+            monthly spend, supporting business laptop leasing and scalable
+            managed device services.
           </p>
         </div>
 
@@ -66,7 +50,7 @@ export default function WhyAcer() {
           {/* Connector Line */}
           <div className="absolute top-12 right-0 left-0 h-[2px] bg-gradient-to-r from-green-200 via-slate-200 to-blue-200" />
 
-          <div className="relative grid grid-cols-5 gap-10">
+          <div className="relative grid grid-cols-2 gap-10 mx-auto max-w-2xl">
             {steps.map((step, i) => {
               const Icon = step.icon;
 
@@ -136,7 +120,7 @@ export default function WhyAcer() {
                 ?.scrollIntoView({ behavior: "smooth" })
             }
           >
-            Inquire About Acer DaaS
+            Inquire About DaaS
             <ChevronRight className="h-4 w-4" />
           </button>
         </div>

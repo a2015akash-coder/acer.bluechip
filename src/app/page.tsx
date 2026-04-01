@@ -18,10 +18,11 @@ export default function Home() {
         <Hero />
         <ValueProps />
         <WhyAcer />
-        <Portfolio />
         <HowDaasWorks />
+        <Portfolio />
+                <Resources />
         <Testimonials />
-        <Resources />
+
         <FAQSection />
         <ConversionBlock />
       </main>

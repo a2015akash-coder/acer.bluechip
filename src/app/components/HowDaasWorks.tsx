@@ -12,26 +12,26 @@ const steps = [
   {
     icon: FileText,
     number: "1",
-    title: "Choose Your Hardware",
-    desc: "Select from laptops, desktops, monitors, and supporting devices to meet your business needs",
+    title: "Scope",
+    desc: "Define requirements, select hardware, and align lifecycle services.",
   },
   {
     icon: UserCheck,
     number: "2",
-    title: "Pick Lifecycle Services",
-    desc: "Select pre-deployment, deployment, in-use, and end-of-term services tailored to your organisation",
+    title: "Upgrade & Deployment",
+    desc: "Configure devices, deploy systems, and support refresh requirements.",
   },
   {
     icon: CheckSquare,
     number: "3",
-    title: "Set Your Service Term",
-    desc: "Choose the subscription duration that best fits your organisation's needs and budget",
+    title: "In-Use",
+    desc: "Provide Tier 1 support and manage device replacement when required.",
   },
   {
     icon: ShoppingCart,
     number: "4",
-    title: "Get Your Proposal",
-    desc: "Receive a clear monthly proposal based on your selected hardware and services.",
+    title: "Decommission & Replace",
+    desc: "Manage device collection, secure erasure, and lifecycle replacement.",
   },
 ];
 
@@ -42,8 +42,13 @@ export default function HowDaasWorks() {
         {/* Header */}
         <div className="mx-auto mb-20 max-w-4xl text-center">
           <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">
-            How the <span className="text-acer">DaaS</span> Process Works
+            Rest Easy with <span className="text-acer">End-to-End</span> Support
           </h2>
+          <p className="mt-4 text-base leading-relaxed text-slate-600 md:text-lg">
+            A structured lifecycle framework supporting device lifecycle
+            management, enabling partners to deliver and manage Acer devices
+            from initial scoping through to end-of-term replacement.
+          </p>
         </div>
 
         {/* Desktop Layout */}

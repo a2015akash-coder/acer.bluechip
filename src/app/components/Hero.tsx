@@ -5,11 +5,11 @@ import { useCallback } from "react";
 import { LeadForm } from "./LeadForm";
 
 const VALUE_POINTS = [
-  "Flexible device and peripheral selection tailored to your business needs",
-  "End-to-end lifecycle management, from deployment to secure end-of-term recovery",
-  "Integrated Tier 1 support and rapid device replacement to minimise downtime",
-  "Certified data erasure and ESG-aligned disposal compliant with ISO and R2 standards",
-  "Predictable monthly repayments across flexible 2-4 year terms",
+  "Flexible device and peripheral selection",
+  "End-to-end lifecycle coverage",
+  "Tier 1 support and device replacement",
+  "Certified data erasure and compliant disposal",
+  "Flexible 2\u20134 year subscription terms",
 ];
 
 const HERO_IMAGE = {
@@ -81,7 +81,7 @@ export default function Hero() {
                 onClick={handleScrollToForm}
                 className="inline-flex items-center gap-2 rounded-sm font-semibold text-acer hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-acer focus-visible:ring-offset-2"
               >
-                Request a DaaS Quote
+                Inquire About DaaS
                 <ChevronRight className="h-4 w-4" aria-hidden="true" />
               </button>
             </div>

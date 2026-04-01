@@ -88,14 +88,13 @@ export default function Portfolio() {
             id="portfolio-heading"
             className="mb-4 text-3xl font-bold leading-tight tracking-tight text-slate-900 md:text-4xl"
           >
-            Why Add <span className="text-acer">Acer</span> DaaS to Your
-            Portfolio
+            Achieve a Flexible and Comprehensive{" "}
+            <span className="text-acer">Device Offering</span>
           </h2>
 
           <p className="text-base leading-7 text-slate-600 md:text-lg">
-            Acer commercial devices are delivered within a structured DaaS
-            framework, supporting partners offering lifecycle-aligned device
-            programs.
+            Deliver Acer devices through a structured DaaS framework with
+            lower upfront costs and predictable monthly spend.
           </p>
         </header>
 
@@ -111,7 +110,7 @@ export default function Portfolio() {
             onClick={handleScrollToForm}
             className="inline-flex items-center gap-2 rounded-lg bg-acer px-8 py-3 font-semibold text-white shadow transition-all duration-300 hover:bg-acer-dark hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-acer focus-visible:ring-offset-2"
           >
-            Speak with Our DaaS Team
+            Get the Full Acer DaaS Overview
             <ChevronRight className="h-4 w-4" aria-hidden="true" />
           </button>
         </div>

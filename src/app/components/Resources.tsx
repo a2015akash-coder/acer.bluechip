@@ -32,13 +32,13 @@ export default function Resources() {
           {/* LEFT SIDE */}
           <div className="space-y-6">
             <h2 className="text-3xl font-bold leading-tight text-slate-900 md:text-4xl">
-              Insights and <span className="text-acer">Resources</span>
+              <span className="text-acer">Acer DaaS</span> in Action. Built for
+              Cost Efficient Delivery.
             </h2>
 
             <p className="max-w-lg text-lg leading-relaxed text-slate-600">
-              Access product insights, deployment guides, and structured
-              solution overviews from Acer and Bluechip to get the most from the
-              DaaS framework.
+              Watch how Acer Device as a Service works, including lifecycle
+              management, deployment, and end-of-term processes.
             </p>
           </div>
 
