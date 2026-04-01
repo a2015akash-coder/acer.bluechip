@@ -1,7 +1,7 @@
 "use client";
 
 import { ChevronRight, Loader2 } from "lucide-react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
 import { submitLead } from "@/lib/api";
 import type { LeadFormValues, LeadSource, UtmParams } from "@/types/lead";
@@ -30,17 +30,20 @@ export function LeadForm({
   className = "",
 }: LeadFormProps) {
   const router = useRouter();
-  const searchParams = useSearchParams();
 
   const utmParams = useMemo<UtmParams>(() => {
+    if (typeof window === "undefined") {
+      return { utm_source: "", utm_medium: "", utm_campaign: "", utm_content: "", utm_term: "" };
+    }
+    const params = new URLSearchParams(window.location.search);
     return {
-      utm_source: searchParams.get("utm_source") || "",
-      utm_medium: searchParams.get("utm_medium") || "",
-      utm_campaign: searchParams.get("utm_campaign") || "",
-      utm_content: searchParams.get("utm_content") || "",
-      utm_term: searchParams.get("utm_term") || "",
+      utm_source: params.get("utm_source") || "",
+      utm_medium: params.get("utm_medium") || "",
+      utm_campaign: params.get("utm_campaign") || "",
+      utm_content: params.get("utm_content") || "",
+      utm_term: params.get("utm_term") || "",
     };
-  }, [searchParams]);
+  }, []);
 
   const [values, setValues] = useState({
     fullName: "",
