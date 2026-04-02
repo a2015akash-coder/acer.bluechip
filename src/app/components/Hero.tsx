@@ -40,7 +40,7 @@ export default function Hero() {
       />
 
       <div
-        className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/50 lg:to-white/20"
+        className="absolute inset-0 bg-gradient-to-r from-white/60 via-white/40 to-white/30 lg:to-white/20"
         aria-hidden="true"
       />
 
