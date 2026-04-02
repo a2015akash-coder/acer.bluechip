@@ -62,7 +62,7 @@ export default function Hero() {
               Device&#8209;as&#8209;a&#8209;Service Solutions
             </h1>
 
-            <p className="max-w-lg text-base leading-relaxed text-slate-600 md:text-lg">
+            <p className="max-w-lg text-base leading-relaxed text-white md:text-lg">
               A fully managed, subscription-based model enabling partners to
               deliver structured device programs without upfront capital
               investment for their clients.
