@@ -1,4 +1,5 @@
 import ConversionBlock from "./components/ConversionBlock";
+import DaaSLeasingComparison from "./components/DaasLeasingComparison";
 import FAQSection from "./components/FAQSection";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
@@ -23,7 +24,7 @@ export default function Home() {
         <Resources />
         <ValueProps />
         <Testimonials />
-
+<DaaSLeasingComparison/>
         <FAQSection />
 
         <ConversionBlock />
