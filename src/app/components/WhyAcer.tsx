@@ -1,10 +1,6 @@
 "use client";
 
-import {
-  ChevronRight,
-  DollarSign,
-  TrendingUp,
-} from "lucide-react";
+import { ChevronRight, DollarSign, TrendingUp } from "lucide-react";
 
 const steps = [
   {
@@ -21,108 +17,110 @@ const steps = [
 
 export default function WhyAcer() {
   return (
-    <section className="relative overflow-hidden bg-gray-50 py-16">
+    <section className="relative overflow-hidden bg-white py-20">
       {/* Background */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-24 -left-24 h-96 w-96 rounded-full bg-green-100/40 blur-3xl" />
-        <div className="absolute right-0 bottom-0 h-[28rem] w-[28rem] rounded-full bg-blue-100/30 blur-3xl" />
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:40px_40px] opacity-[0.04]" />
+        <div className="absolute top-0 right-0 h-full w-[42%] rounded-l-[3rem] bg-gradient-to-b from-emerald-50/90 via-white to-blue-50/70" />
+        <div className="absolute top-16 right-16 h-72 w-72 rounded-full bg-emerald-100/50 blur-3xl" />
+        <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-blue-100/40 blur-3xl" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="mx-auto mb-14 max-w-3xl text-center">
-          <h2 className="mb-4 text-3xl font-bold leading-tight text-slate-900 md:text-4xl">
-            Reduce Costs with a Subscription-Based{" "}
-            <span className="text-acer">Device Management</span>
-          </h2>
-          <p className="text-base leading-relaxed text-slate-600 md:text-lg">
-            As an authorised Acer distributor, Bluechip enables partners to
-            deliver Device as a Service through a subscription model that
-            reduces upfront costs and shifts device investment to predictable
-            monthly spend, supporting business laptops, PCs and Monitors leasing and scalable
-            managed device services.
-          </p>
-        </div>
+        <div className="grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr]">
+          {/* Left intro */}
+          <div className="max-w-xl text-center lg:text-left">
+            <div className="mb-4 inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-4 py-1.5 text-sm font-medium text-emerald-700">
+              Subscription Economics
+            </div>
 
-        {/* Desktop Horizontal Flow */}
-        <div className="relative hidden lg:block">
-          {/* Connector Line */}
-          <div className="absolute top-12 right-0 left-0 h-[2px] bg-gradient-to-r from-green-200 via-slate-200 to-blue-200" />
+            <h2 className="text-3xl font-bold leading-tight text-slate-900 md:text-4xl">
+              Reduce Costs with a Subscription-Based{" "}
+              <span className="text-acer">Device Management</span>
+            </h2>
 
-          <div className="relative grid grid-cols-2 gap-10 mx-auto max-w-2xl">
-            {steps.map((step, i) => {
-              const Icon = step.icon;
+            <p className="mt-5 text-base leading-relaxed text-slate-600 md:text-lg">
+              As an authorised Acer distributor, Bluechip enables partners to
+              deliver Device as a Service through a subscription model that
+              reduces upfront costs and shifts device investment to predictable
+              monthly spend, supporting business laptops, PCs and monitors with
+              scalable managed device services.
+            </p>
 
-              return (
-                <div
-                  key={i}
-                  className="group relative text-center transition-transform duration-300 hover:-translate-y-2"
-                >
-                  {/* Icon */}
-                  <div className="relative z-10 mx-auto flex h-20 w-20 items-center justify-center rounded-2xl border border-gray-200 bg-white text-acer shadow-sm transition-all duration-300 group-hover:border-green-300 group-hover:shadow-md">
-                    <Icon className="h-7 w-7 transition-transform duration-300 group-hover:scale-110" />
-                  </div>
-
-                  {/* Title */}
-                  <h3 className="mt-6 mb-3 text-base font-semibold text-slate-900">
-                    {step.title}
-                  </h3>
-
-                  {/* Text */}
-                  <p className="px-2 text-sm leading-relaxed text-slate-600">
-                    {step.text}
-                  </p>
-                </div>
-              );
-            })}
+            <div className="mt-8">
+              <button
+                type="button"
+                className="inline-flex items-center gap-2 rounded-xl bg-acer px-8 py-3 font-semibold text-white shadow transition-all duration-300 hover:bg-acer-dark hover:shadow-lg"
+                onClick={() =>
+                  document
+                    .getElementById("partnerform")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+              >
+                Inquire About DaaS
+                <ChevronRight className="h-4 w-4" />
+              </button>
+            </div>
           </div>
-        </div>
 
-        {/* Mobile Vertical Timeline */}
-        <div className="relative space-y-12 lg:hidden">
-          {/* Vertical Line */}
-          <div className="absolute top-0 bottom-0 left-5 w-px bg-slate-200" />
+          {/* Right feature track */}
+          <div className="relative">
+            <div className="rounded-[2rem] border border-slate-200/80 bg-white/80 p-6 shadow-[0_20px_60px_rgba(15,23,42,0.08)] backdrop-blur sm:p-8">
+              <div className="relative hidden lg:block">
+                <div className="absolute top-10 left-[10%] right-[10%] h-px bg-gradient-to-r from-emerald-300 via-slate-200 to-blue-300" />
 
-          {steps.map((step, i) => {
-            const Icon = step.icon;
+                <div className="grid grid-cols-2 gap-8">
+                  {steps.map((step) => {
+                    const Icon = step.icon;
 
-            return (
-              <div key={i} className="relative flex gap-5">
-                {/* Icon */}
-                <div className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-gray-200 bg-white text-acer shadow-sm">
-                  <Icon className="h-5 w-5" />
-                </div>
+                    return (
+                      <div
+                        key={step.title}
+                        className="group relative text-center transition-transform duration-300 hover:-translate-y-2"
+                      >
+                        <div className="relative z-10 mx-auto flex h-20 w-20 items-center justify-center rounded-3xl border border-slate-200 bg-white text-acer shadow-sm transition-all duration-300 group-hover:border-emerald-300 group-hover:shadow-md">
+                          <Icon className="h-8 w-8 transition-transform duration-300 group-hover:scale-110" />
+                        </div>
 
-                {/* Content */}
-                <div>
-                  <h3 className="mb-2 text-base font-semibold leading-snug text-slate-900">
-                    {step.title}
-                  </h3>
+                        <h3 className="mt-6 text-lg font-semibold text-slate-900">
+                          {step.title}
+                        </h3>
 
-                  <p className="text-sm leading-relaxed text-slate-600">
-                    {step.text}
-                  </p>
+                        <p className="mx-auto mt-3 max-w-xs text-sm leading-relaxed text-slate-600">
+                          {step.text}
+                        </p>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
-            );
-          })}
-        </div>
 
-        {/* CTA */}
-        <div className="mt-14 text-center">
-          <button
-            type="button"
-            className="inline-flex items-center gap-2 rounded-lg bg-acer px-8 py-3 font-semibold text-white shadow transition-all duration-300 hover:bg-acer-dark hover:shadow-lg"
-            onClick={() =>
-              document
-                .getElementById("partnerform")
-                ?.scrollIntoView({ behavior: "smooth" })
-            }
-          >
-            Inquire About DaaS
-            <ChevronRight className="h-4 w-4" />
-          </button>
+              <div className="space-y-5 lg:hidden">
+                {steps.map((step) => {
+                  const Icon = step.icon;
+
+                  return (
+                    <div
+                      key={step.title}
+                      className="flex items-start gap-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm"
+                    >
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-slate-200 bg-emerald-50 text-acer">
+                        <Icon className="h-6 w-6" />
+                      </div>
+
+                      <div>
+                        <h3 className="text-base font-semibold text-slate-900">
+                          {step.title}
+                        </h3>
+                        <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                          {step.text}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
