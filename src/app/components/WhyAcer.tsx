@@ -29,9 +29,7 @@ export default function WhyAcer() {
         <div className="grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr]">
           {/* Left intro */}
           <div className="max-w-xl text-center lg:text-left">
-            <div className="mb-4 inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-4 py-1.5 text-sm font-medium text-emerald-700">
-              Subscription Economics
-            </div>
+           
 
             <h2 className="text-3xl font-bold leading-tight text-slate-900 md:text-4xl">
               Reduce Costs with a Subscription-Based{" "}

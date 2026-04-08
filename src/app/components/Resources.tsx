@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 export default function Resources() {
   const [isVisible, setIsVisible] = useState(false);
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const videoId = "sfFIy9I4-_s";
+  const videoId = "JxmjrV_yYiQ";
 
   useEffect(() => {
     const observer = new IntersectionObserver(

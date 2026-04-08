@@ -48,9 +48,7 @@ export default function HowDaasWorks() {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mx-auto mb-14 max-w-3xl text-center">
-          <div className="mb-4 inline-flex items-center rounded-full border border-green-200 bg-white/80 px-4 py-1.5 text-sm font-medium text-slate-700 shadow-sm">
-            Lifecycle Management Framework
-          </div>
+
 
           <h2 className="text-3xl font-bold leading-tight text-slate-900 md:text-4xl">
             Rest Easy with <span className="text-acer">End-to-End</span> Support

@@ -97,10 +97,7 @@ export default function DaaSLeasingComparison() {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mx-auto max-w-3xl text-center">
-          <div className="mb-4 inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-4 py-1.5 text-sm font-medium text-emerald-700">
-            <BadgeCheck className="mr-2 h-4 w-4" />
-            DaaS vs Leasing
-          </div>
+          
 
           <h2 className="text-3xl font-bold leading-tight tracking-tight text-slate-900 md:text-4xl">
             How <span className="text-acer">Acer DaaS</span> Differs from
@@ -115,42 +112,7 @@ export default function DaaSLeasingComparison() {
           </p>
         </div>
 
-        {/* Top summary cards */}
-        <div className="mt-12 grid gap-5 lg:grid-cols-2">
-          <div className="group relative overflow-hidden rounded-3xl border border-emerald-200/70 bg-gradient-to-br from-white via-emerald-50/70 to-white p-6 shadow-[0_10px_40px_rgba(15,23,42,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_50px_rgba(15,23,42,0.10)]">
-            <div className="absolute right-0 top-0 h-28 w-28 rounded-full bg-emerald-100/60 blur-2xl" />
-            <div className="relative">
-              <div className="inline-flex items-center rounded-full border border-emerald-200 bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-700">
-                Acer DaaS
-              </div>
-              <h3 className="mt-4 text-2xl font-semibold text-slate-900">
-                Subscription model with built-in operational value
-              </h3>
-              <p className="mt-3 max-w-xl text-sm leading-relaxed text-slate-600 sm:text-base">
-                Best suited for customers who want predictable monthly spend,
-                simplified lifecycle management and a more complete device
-                solution rather than finance-only procurement.
-              </p>
-            </div>
-          </div>
-
-          <div className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white/90 p-6 shadow-[0_10px_40px_rgba(15,23,42,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_50px_rgba(15,23,42,0.08)]">
-            <div className="absolute right-0 top-0 h-28 w-28 rounded-full bg-slate-100/70 blur-2xl" />
-            <div className="relative">
-              <div className="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-slate-600">
-                Leasing
-              </div>
-              <h3 className="mt-4 text-2xl font-semibold text-slate-900">
-                Cost distribution with fewer service-layer advantages
-              </h3>
-              <p className="mt-3 max-w-xl text-sm leading-relaxed text-slate-600 sm:text-base">
-                Suitable when the main requirement is financing hardware over
-                time, but it does not usually deliver the same all-in-one
-                service structure or flexibility as DaaS.
-              </p>
-            </div>
-          </div>
-        </div>
+    
 
         {/* Desktop comparison */}
         <div className="relative mt-8 hidden lg:block">
