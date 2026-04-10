@@ -20,7 +20,9 @@ export const metadata: Metadata = {
   description:
     "Flexible Acer Device-as-a-Service solutions for IT resellers and MSPs. Subscription-based device programs with lifecycle management through Bluechip.",
   icons: {
-    icon: "/acer.ico",
+    icon: [
+    { url: "/acer.png", sizes: "32x32", type: "image/png" },
+  ],
   },
 };
 
